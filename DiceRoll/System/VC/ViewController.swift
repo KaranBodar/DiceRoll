@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     //MARK: - IBOutlet -
     
     @IBOutlet weak var blurView: UIVisualEffectView!
@@ -23,12 +23,27 @@ class ViewController: UIViewController {
     }
     //MARK: - IBAction -
     @IBAction func clickRollDice(_ sender: UIButton) {
-        self.imgArr.shuffle()
-        if let firstImg = self.imgArr.first {
-            print(firstImg.description)
-            self.imgDiceImage.image = UIImage(named: firstImg)
-        }
+        rollDice()
     }
-
+    //MARK: - Finction -
+    func rollDice() {
+        // Simple animation: rotate + fade out/in
+        UIView.animate(withDuration: 0.3, animations: {
+            self.imgDiceImage.transform = CGAffineTransform(rotationAngle: .pi)
+            self.imgDiceImage.alpha = 0.0
+        }, completion: { _ in
+            // Update dice face
+            self.imgArr.shuffle()
+            if let firstImg = self.imgArr.first {
+                print(firstImg.description)
+                self.imgDiceImage.image = UIImage(named: firstImg)
+            }
+            
+            // Animate back
+            UIView.animate(withDuration: 0.3) {
+                self.imgDiceImage.transform = .identity
+                self.imgDiceImage.alpha = 1.0
+            }
+        })
+    }
 }
-
