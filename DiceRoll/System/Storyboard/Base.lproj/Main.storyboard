@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DiceRoll" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG-2" translatesAutoresizingMaskIntoConstraints="NO" id="g6Z-mL-iah">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cq2-is-aMH">
+                                <rect key="frame" x="123" y="269" width="129" height="129"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="129" id="1jh-7K-lAP"/>
+                                    <constraint firstAttribute="width" constant="129" id="5Oy-b0-xnc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHB-Je-eic">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="e4s-jW-pav">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSl-YN-IW3">
+                                <rect key="frame" x="20" y="514" width="335" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Roll the dice">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickRollDice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9cH-Qq-dX9"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WEf-dl-cFQ">
+                                <rect key="frame" x="122.5" y="268.5" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="3bD-lq-3HH"/>
+                                    <constraint firstAttribute="width" constant="130" id="Txs-j2-OiG"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g6Z-mL-iah" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Fu-YE-M3k"/>
+                            <constraint firstItem="g6Z-mL-iah" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2Ex-he-gch"/>
+                            <constraint firstItem="g6Z-mL-iah" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DHC-Nn-m3M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RSl-YN-IW3" secondAttribute="trailing" constant="20" id="EXb-0k-Yo4"/>
+                            <constraint firstItem="Cq2-is-aMH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GjY-lE-Z6G"/>
+                            <constraint firstItem="Cq2-is-aMH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JIZ-9w-aQQ"/>
+                            <constraint firstItem="RSl-YN-IW3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jjj-Vl-X7e"/>
+                            <constraint firstItem="WEf-dl-cFQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Pb7-TU-0tv"/>
+                            <constraint firstItem="WEf-dl-cFQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YzV-Y1-wCI"/>
+                            <constraint firstItem="RSl-YN-IW3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WEf-dl-cFQ" secondAttribute="bottom" constant="115" id="byT-CN-PTc"/>
+                            <constraint firstItem="zHB-Je-eic" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cm7-tR-rWi"/>
+                            <constraint firstItem="zHB-Je-eic" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fTd-xB-Bj1"/>
+                            <constraint firstItem="zHB-Je-eic" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="g9S-c0-bxj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RSl-YN-IW3" secondAttribute="bottom" constant="115" id="ntp-3i-Vx4"/>
+                            <constraint firstAttribute="bottom" secondItem="zHB-Je-eic" secondAttribute="bottom" id="oHE-z2-FVL"/>
+                            <constraint firstAttribute="bottom" secondItem="g6Z-mL-iah" secondAttribute="bottom" id="rSd-SI-9q0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blurView" destination="zHB-Je-eic" id="s7W-fy-mmp"/>
+                        <outlet property="imgDiceImage" destination="WEf-dl-cFQ" id="I3M-oY-jFw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.59999999999999" y="-71.514242878560722"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BG-2" width="704" height="1408"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
