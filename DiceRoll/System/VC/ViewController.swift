@@ -13,7 +13,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var imgDiceImage: UIImageView!
+    @IBOutlet weak var diceView: UIView!
+    
     //MARK: - Variables -
+    
     var imgArr = ["1","2","3","4","5","6"]
     
     override func viewDidLoad() {
@@ -30,7 +33,9 @@ class ViewController: UIViewController {
         // Simple animation: rotate + fade out/in
         UIView.animate(withDuration: 0.3, animations: {
             self.imgDiceImage.transform = CGAffineTransform(rotationAngle: .pi)
+            self.diceView.transform = CGAffineTransform(rotationAngle: .pi)
             self.imgDiceImage.alpha = 0.0
+            self.diceView.alpha = 0.0
         }, completion: { _ in
             // Update dice face
             self.imgArr.shuffle()
@@ -42,7 +47,9 @@ class ViewController: UIViewController {
             // Animate back
             UIView.animate(withDuration: 0.3) {
                 self.imgDiceImage.transform = .identity
+                self.diceView.transform = .identity
                 self.imgDiceImage.alpha = 1.0
+                self.diceView.alpha = 1.0
             }
         })
     }

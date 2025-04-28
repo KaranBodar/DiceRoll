@@ -83,6 +83,7 @@
                     </view>
                     <connections>
                         <outlet property="blurView" destination="zHB-Je-eic" id="s7W-fy-mmp"/>
+                        <outlet property="diceView" destination="Cq2-is-aMH" id="icp-Y0-HgD"/>
                         <outlet property="imgDiceImage" destination="WEf-dl-cFQ" id="I3M-oY-jFw"/>
                     </connections>
                 </viewController>
