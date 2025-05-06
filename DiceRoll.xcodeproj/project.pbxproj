@@ -80,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25FA6A4E2DCA24BA00D2E29E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				25FD14292DBB9332000EB71A /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		25FD13E82DBB9306000EB71A = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +111,6 @@
 		25FD14322DBB9332000EB71A /* DiceRoll */ = {
 			isa = PBXGroup;
 			children = (
-				25FD14292DBB9332000EB71A /* Assets.xcassets */,
 				25FD142A2DBB9332000EB71A /* DiceRoll.xcdatamodeld */,
 				25FD142B2DBB9332000EB71A /* Info.plist */,
 				25FD14442DBB933E000EB71A /* System */,
@@ -131,6 +138,7 @@
 		25FD14442DBB933E000EB71A /* System */ = {
 			isa = PBXGroup;
 			children = (
+				25FA6A4E2DCA24BA00D2E29E /* Assets */,
 				25FD14462DBB934A000EB71A /* Storyboard */,
 				25FD14452DBB9345000EB71A /* VC */,
 			);

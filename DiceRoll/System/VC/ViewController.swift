@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -18,15 +19,18 @@ class ViewController: UIViewController {
     //MARK: - Variables -
     
     var imgArr = ["1","2","3","4","5","6"]
+    var audioPlayer : AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.blurView.layer.opacity = 0.8
+        self.diceView.layer.opacity = 0
     }
     //MARK: - IBAction -
     @IBAction func clickRollDice(_ sender: UIButton) {
         rollDice()
+        playSound()
     }
     //MARK: - Finction -
     func rollDice() {
@@ -47,10 +51,24 @@ class ViewController: UIViewController {
             // Animate back
             UIView.animate(withDuration: 0.3) {
                 self.imgDiceImage.transform = .identity
+                self.diceView.layer.opacity = 1
                 self.diceView.transform = .identity
                 self.imgDiceImage.alpha = 1.0
                 self.diceView.alpha = 1.0
             }
         })
+    }
+    func playSound() {
+        guard let url = Bundle.main.url(forResource: "Add new sound effect.", withExtension: ".mp3") else {
+            print("File not found.")
+            return
+        }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.prepareToPlay()
+            audioPlayer?.play()
+        } catch {
+            print("Faild to play sound.")
+        }
     }
 }
