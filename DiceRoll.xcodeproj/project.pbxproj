@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		250D488A2DBC8AB400849203 /* CornerRadius_Border_Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D48892DBC8AB400849203 /* CornerRadius_Border_Gradient.swift */; };
+		255578A32DCA2C8600B68480 /* DiceRoll.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 255578A22DCA2C8600B68480 /* DiceRoll.mp3 */; };
 		25FD14342DBB9332000EB71A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25FD14292DBB9332000EB71A /* Assets.xcassets */; };
 		25FD14362DBB9332000EB71A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25FD142D2DBB9332000EB71A /* LaunchScreen.storyboard */; };
 		25FD14372DBB9332000EB71A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25FD142F2DBB9332000EB71A /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		250D48892DBC8AB400849203 /* CornerRadius_Border_Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius_Border_Gradient.swift; sourceTree = "<group>"; };
+		255578A22DCA2C8600B68480 /* DiceRoll.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DiceRoll.mp3; sourceTree = "<group>"; };
 		25FD13F12DBB9306000EB71A /* DiceRoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceRoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25FD140A2DBB9309000EB71A /* DiceRollTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiceRollTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25FD14142DBB9309000EB71A /* DiceRollUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiceRollUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				25FD14292DBB9332000EB71A /* Assets.xcassets */,
+				255578A22DCA2C8600B68480 /* DiceRoll.mp3 */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				255578A32DCA2C8600B68480 /* DiceRoll.mp3 in Resources */,
 				25FD14342DBB9332000EB71A /* Assets.xcassets in Resources */,
 				25FD14362DBB9332000EB71A /* LaunchScreen.storyboard in Resources */,
 				25FD14372DBB9332000EB71A /* Main.storyboard in Resources */,

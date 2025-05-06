@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     //MARK: - Finction -
     func rollDice() {
         // Simple animation: rotate + fade out/in
-        UIView.animate(withDuration: 0.3, animations: {
+        UIView.animate(withDuration: 0.2, animations: {
             self.imgDiceImage.transform = CGAffineTransform(rotationAngle: .pi)
             self.diceView.transform = CGAffineTransform(rotationAngle: .pi)
             self.imgDiceImage.alpha = 0.0
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
             }
             
             // Animate back
-            UIView.animate(withDuration: 0.3) {
+            UIView.animate(withDuration: 0.2) {
                 self.imgDiceImage.transform = .identity
                 self.diceView.layer.opacity = 1
                 self.diceView.transform = .identity
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         })
     }
     func playSound() {
-        guard let url = Bundle.main.url(forResource: "Add new sound effect.", withExtension: ".mp3") else {
+        guard let url = Bundle.main.url(forResource: "DiceRoll", withExtension: ".mp3") else {
             print("File not found.")
             return
         }
